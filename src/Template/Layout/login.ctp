@@ -13,11 +13,17 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<?php echo $this->Html->head(['bootstrap' => true]); ?>
+		<?php echo $this->Html->head(); ?>
+		<?php echo $this->Html->css(['front-bootstrap.css']); ?>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
-	<body class="error">
+
+	<body>
 		<div class="container">
-			<?php echo $this->fetch('content'); ?>
+			<div class="well">
+				<?php echo $this->Flash->render(); ?>
+				<?php echo $this->fetch('content'); ?>
+			</div>
 		</div>
 	</body>
 </html>
